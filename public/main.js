@@ -1,4 +1,5 @@
-import { gsap } from "../node_modules/gsap/all.js";
+// Uncomment when developing
+// import { gsap } from "../node_modules/gsap/all.js";
 
 //========== Elements ==========//
 const teamHeader = document.querySelector(".team-header");
