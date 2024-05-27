@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1"
+    />
+    <title>Tailwind CSS /w GSAP</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Development CSS Code -->
+    <!-- <link rel="stylesheet" href="main.css" /> -->
+    <!-- Production CSS Code -->
+    <link rel="stylesheet" href="main.min.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <header class="bg-purple-200 min-h-screen p-5 px-10 flex flex-col">
+      <nav
+        id="navbar"
+        class="flex justify-between items-center px-10 py-4 bg-purple-800 text-white rounded-full max-sm:p-0 max-sm:bg-transparent max-sm:text-black"
+      >
+        <h2 class="nav-logo text-2xl font-bold max-sm:text-purple-600">
+          Logo.
+        </h2>
+        <ul class="flex gap-7 max-sm:hidden">
+          <li class="link-container">
+            <a href="#!" class="opacity-80 hover:underline hover:opacity-100"
+              >Home</a
+            >
+          </li>
+          <li class="link-container">
+            <a href="#!" class="opacity-80 hover:underline hover:opacity-100"
+              >Pricing</a
+            >
+          </li>
+          <li class="link-container">
+            <a href="#!" class="opacity-80 hover:underline hover:opacity-100"
+              >About</a
+            >
+          </li>
+          <li class="link-container">
+            <a href="#!" class="opacity-80 hover:underline hover:opacity-100"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+        <button class="hidden max-sm:block">
+          <i
+            class="fa-solid fa-bars text-2xl opacity-60 hover:opacity-100 hover:text-purple-600"
+          ></i>
+        </button>
+      </nav>
+
+      <div class="text-center flex grow flex-col justify-center">
+        <h1 class="hero-header text-7xl font-bold uppercase max-sm:text-4xl">
+          Welcome to
+        </h1>
+        <h2 class="hero-sub-header text-4xl font-bold mt-1 max-sm:text-2xl">
+          Learning <span class="text-purple-600">Tailwind CSS</span>
+        </h2>
+        <p class="hero-info leading-relaxed mt-8 max-w-[25rem] mx-auto">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut sunt
+          totam incidunt inventore a! Accusantium rem quis minus corporis
+          nostrum, nesciunt, totam minima autem sequi repellendus ad, distinctio
+          id porro.
+        </p>
+        <div
+          class="hero-button-wrapper mt-10 flex justify-center gap-5 max-sm:flex-col"
+        >
+          <button
+            class="font-bold text-lg bg-purple-600 rounded-full text-white px-10 py-3 transition duration-150 ease-in-out hover:bg-purple-500 hover:scale-110 hover:-translate-y-2 max-sm:px-8 max-sm:py-3 max-sm:text-base max-sm:uppercase"
+          >
+            Explore
+          </button>
+          <button
+            class="font-bold text-lg bg-purple-600 rounded-full text-white px-10 py-3 transition duration-150 ease-in-out hover:bg-purple-500 hover:scale-110 hover:-translate-y-2 max-sm:px-8 max-sm:py-3 max-sm:text-base max-sm:uppercase"
+          >
+            Discover
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Teams Section -->
+    <section class="my-40">
+      <h2
+        class="team-header text-center text-7xl font-bold text-purple-600 max-sm:text-4xl max-sm:uppercase"
+      >
+        Our Team
+      </h2>
+
+      <div
+        class="flex justify-center gap-8 mx-8 mt-40 flex-wrap max-lg:gap-y-28"
+      >
+        <div
+          class="team-card max-w-80 text-center border-2 border-gray-200 rounded-lg p-8 relative"
+        >
+          <img
+            src="images/pfp1.jpg"
+            alt="Profile 1"
+            class="card-img w-32 h-32 absolute -top-16 left-1/2 -translate-x-1/2 rounded-full"
+          />
+          <h3 class="card-name text-2xl font-bold mt-12">Rosa Martin</h3>
+          <p class="card-info mt-4 opacity-70">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            quaerat ex quos repellat voluptates minus. Aut delectus fugiat iure
+            quasi!
+          </p>
+          <div class="mt-8 flex gap-8 justify-center">
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-facebook-f text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-x-twitter text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-instagram text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="team-card max-w-80 text-center border-2 border-gray-200 rounded-lg p-8 relative"
+        >
+          <img
+            src="images/pfp2.jpg"
+            alt="Profile 1"
+            class="card-img w-32 h-32 absolute -top-16 left-1/2 -translate-x-1/2 rounded-full"
+          />
+          <h3 class="card-name text-2xl font-bold mt-12">Millie Tina</h3>
+          <p class="card-info mt-4 opacity-70">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            quaerat ex quos repellat voluptates minus. Aut delectus fugiat iure
+            quasi!
+          </p>
+          <div class="mt-8 flex gap-8 justify-center">
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-facebook-f text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-x-twitter text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-instagram text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <div
+          class="team-card max-w-80 text-center border-2 border-gray-200 rounded-lg p-8 relative"
+        >
+          <img
+            src="images/pfp3.jpg"
+            alt="Profile 1"
+            class="card-img w-32 h-32 absolute -top-16 left-1/2 -translate-x-1/2 rounded-full"
+          />
+          <h3 class="card-name text-2xl font-bold mt-12">Josh Boi</h3>
+          <p class="card-info mt-4 opacity-70">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            quaerat ex quos repellat voluptates minus. Aut delectus fugiat iure
+            quasi!
+          </p>
+          <div class="mt-8 flex gap-8 justify-center">
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-facebook-f text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-x-twitter text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+            <a href="#!" class="card-icon"
+              ><i
+                class="fa-brands fa-instagram text-xl opacity-70 hover:opacity-100 hover:scale-150 transition-all duration-100"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer
+      class="text-white py-20 px-8 bg-purple-800 flex justify-around max-lg:flex-col max-lg:items-center max-lg:text-center"
+    >
+      <div>
+        <h3 class="footer-about-header text-2xl font-bold max-lg:text-4xl">
+          About Website
+        </h3>
+        <p class="footer-about-info max-w-xl mt-4 leading-relaxed max-lg:mt-8">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nam
+          saepe aspernatur! Itaque repellendus dicta quasi vel nemo? Reiciendis
+          nemo quasi aliquid maiores voluptas expedita ipsa a voluptatem,
+          distinctio voluptates.
+        </p>
+      </div>
+
+      <div
+        class="max-lg:mt-20 max-lg:flex max-lg:items-end max-sm:flex-col max-sm:items-center"
+      >
+        <h3 class="footer-link-header text-2xl font-bold">Quick Links:</h3>
+        <ul
+          class="footer-link-wrapper mt-4 max-lg:flex max-lg:mt-0 max-lg:ml-12 gap-8 max-sm:flex-col max-sm:gap-4 max-sm:ml-0 max-sm:mt-8"
+          data-anim-diff="footer-link-wrapper"
+        >
+          <li class="footer-link-container mt-3 max-lg:mt-0">
+            <a href="#!" class="opacity-70 hover:opacity-100 hover:underline"
+              >Home</a
+            >
+          </li>
+          <li class="footer-link-container mt-3 max-lg:mt-0">
+            <a href="#!" class="opacity-70 hover:opacity-100 hover:underline"
+              >Pricing</a
+            >
+          </li>
+          <li class="footer-link-container mt-3 max-lg:mt-0">
+            <a href="#!" class="opacity-70 hover:opacity-100 hover:underline"
+              >About</a
+            >
+          </li>
+          <li class="footer-link-container mt-3 max-lg:mt-0">
+            <a href="#!" class="opacity-70 hover:opacity-100 hover:underline"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <p class="text-center text-sm py-3 opacity-70">
+      &copy; darkcode.com 2024 All rights reserved.
+    </p>
+
+    <!-- Custom Scripts -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

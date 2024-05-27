@@ -1,0 +1,20 @@
+{
+  "name": "learning-sass",
+  "version": "1.0.0",
+  "main": "./public/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/main.css --watch",
+    "minify": "tailwindcss -i ./public/main.css -o ./public/main.min.css --minify"
+  },
+  "keywords": [],
+  "author": "Ayon Sarker",
+  "license": "ISC",
+  "description": "Some description...",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}
